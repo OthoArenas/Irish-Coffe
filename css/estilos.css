@@ -1,0 +1,530 @@
+@charset "UTF-8";
+/* --------------------------------------------
+------ Hoja de Estilos personalizados CSS -----
+-------------------------------------------- */
+/* -------------------------------------------- 
+1. GENERALES
+--------------------------------------------- */
+html {
+  font-size: 13px; }
+
+body {
+  font-family: 'Poiret One', cursive;
+  color: #5f9375;
+  background-color: #f4f7f3;
+  z-index: -1; }
+
+.font-irish {
+  font-family: 'Irish Grover', cursive; }
+
+.font-montserrat {
+  font-family: 'Montserrat Alternates', sans-serif; }
+
+/* ----------------------------------------
+2.- ESTILOS COLOR PRINCIPAL
+-----------------------------------------*/
+.bg-primary {
+  background-color: #0e9c46 !important; }
+
+.text-primary {
+  color: #0e9c46 !important; }
+
+/* ----------------------------------------
+3.- ESTILOS COLOR SECUNDARIO
+-----------------------------------------*/
+.bg-secondary {
+  background-color: #546174 !important; }
+
+.text-secondary {
+  color: #546174 !important; }
+
+/* ----------------------------------------
+4.- ESTILOS FONDO
+-----------------------------------------*/
+.bg-light {
+  background-color: #cad8db !important; }
+
+/* ----------------------------------------
+5.- ESTILOS BOTONES
+-----------------------------------------*/
+button:focus {
+  outline: none; }
+
+.btn {
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  font-weight: bold; }
+
+.btn-primary {
+  background-color: #0e9c46;
+  border-color: #0e9c46;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.btn-primary:hover {
+  color: #546174;
+  background-color: white;
+  border-color: #0e9c46; }
+
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #546174 !important;
+  background-color: #10b351 !important;
+  border-color: #546174 !important; }
+
+.btn-primary:focus {
+  color: #546174 !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(14, 156, 70, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(14, 156, 70, 0.5) !important; }
+
+/* Insertar la flecha del botón principal */
+.btn-primary::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f138";
+  position: relative;
+  left: 0.6rem;
+  top: 0.1rem;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease; }
+
+.btn-primary:hover::after,
+.btn-primary:active::after,
+.btn-primary:focus::after {
+  left: 0.3rem; }
+
+/* Insertar caja blanca del botón principal */
+.btn-primary::before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
+
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary:active::before {
+  left: -15%;
+  width: 130%; }
+
+/* ----------------------------------------
+6.- ESTILOS #redes-sociales
+-----------------------------------------*/
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: #0e9c46; }
+
+/* ----------------------------------------
+7.- ESTILOS #menu-navegacion
+-----------------------------------------*/
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: white;
+  background: #0e9c46 !important;
+  border-radius: 2rem;
+  padding: 1rem 1.3rem; }
+
+#menu-navegacion .boton-menu,
+#menu-navegacion .boton-menu::before {
+  background-image: none;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f0c9";
+  height: auto;
+  font-size: 2rem; }
+
+#menu-navegacion .icono-cerrar::before {
+  content: "\f00d";
+  position: relative;
+  left: 0.2rem; }
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border: none; }
+
+/* ----------------------------------------
+8.- ESTILOS #dropdown-menu
+-----------------------------------------*/
+.dropdown-menu {
+  background-color: #cad8db !important;
+  border-radius: .5rem; }
+
+.dropdown-item:hover,
+.dropdown-item:active {
+  color: white !important;
+  background-color: #0e9c46 !important;
+  border-radius: .5rem; }
+
+.dropdown:hover > .dropdown-menu {
+  display: block; }
+
+/* Menú desplegable en linea */
+/* .dropdown.open {
+    position: absolute;
+  }
+  
+.dropdown.open .dropdown-menu {
+    display: block;
+    border-radius: 0px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+  
+.dropdown-menu > a{
+    display: table-cell;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+  } */
+/* ----------------------------------------
+9.- ESTILOS FLECHAS MENU DESPLEGABLE
+-----------------------------------------*/
+.navbar-dark .navbar-nav .nav-link {
+  padding: 1rem 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.navbar-dark .navbar-nav .nav-link::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  font-weight: 900;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+#menu-desplegable::after {
+  content: ""; }
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white;
+  background-color: #697a92;
+  border-radius: 2rem; }
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+#desplegable-redes .nav-link {
+  padding: 0.5rem 0.5rem; }
+
+#desplegable-redes .nav-link::after {
+  content: ""; }
+
+#desplegable-redes .nav-link:hover ::before,
+#desplegable-redes .nav-link:hover {
+  color: white !important;
+  background-color: #0e9c46; }
+
+/* ----------------------------------------
+10.- ESTILOS PARA "#slider-principal"
+-----------------------------------------*/
+.swiper-container {
+  z-index: -2; }
+
+.swiper-slide {
+  height: 26.7rem;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center center; }
+
+/* Fondo difuminado para sliders */
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  background: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3; }
+
+/* Estilos para Flechas prev y next de sliders */
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white; }
+
+.swiper-button-prev::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f053";
+  font-weight: 900;
+  font-size: 3rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.swiper-button-next::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: 900;
+  font-size: 3rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+  color: #0e9c46; }
+
+/* Estilos para paginador */
+.swiper-pagination-bullet-active {
+  background: #0e9c46; }
+
+/* Estilos Scrollbar */
+/* .swiper-scrollbar {
+    background: rgba($color: $principal, $alpha: 0.2);
+}
+
+.swiper-scrollbar-drag {
+    background: rgba($color: $principal, $alpha: 0.5)
+} */
+/* ----------------------------------------
+10.- ESTILOS PARA SERVICIO
+-----------------------------------------*/
+.imagen-servicio img {
+  border: 6px solid white;
+  border-radius: 0.25rem; }
+
+.servicio-info {
+  background-color: white;
+  margin-top: -2rem;
+  border-radius: 0.25rem;
+  padding-top: 0.5rem; }
+
+#servicios .btn {
+  border-radius: 0.25rem; }
+
+/* ----------------------------------------
+11.- ESTILOS PARA "#horarios"
+-----------------------------------------*/
+#horarios::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+#horarios .table thead {
+  background-color: #0e9c46; }
+
+#horarios .table-hover tbody tr:hover {
+  color: #0e9c46;
+  background-color: rgba(0, 0, 0, 0.075); }
+
+/* ----------------------------------------
+12.- ESTILOS PARA ".productos"
+-----------------------------------------*/
+.productos .card {
+  border-radius: 0.5rem; }
+
+.productos .card-img-top {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem; }
+
+.productos h3 {
+  font-family: 'Irish Grover', cursive;
+  font-size: 1.5rem; }
+
+.productos .card-body p {
+  font-size: 1.1rem;
+  text-align: justify;
+  padding: 0 1rem; }
+
+.productos .card a {
+  color: #5f9375; }
+
+.productos .card-text {
+  font-size: 1.25rem; }
+
+.productos .card a:hover {
+  text-decoration: none;
+  color: #375544; }
+
+.precio {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center !important; }
+
+/* ----------------------------------------
+13.- ESTILOS PARA "#te-ayudamos"
+-----------------------------------------*/
+#happy-hour::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+/* ----------------------------------------
+13.- ESTILOS PARA "#pie-de-pagina"
+-----------------------------------------*/
+#pie-de-pagina .col-6,
+#pie-de-pagina .col-md-4 {
+  z-index: 0; }
+
+/* ----------------------------------------
+14.- ESTILOS PARA .hero
+-----------------------------------------*/
+.hero {
+  position: relative;
+  z-index: -2; }
+
+.hero h2 {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  background-color: #546174;
+  border-radius: 0.75rem 0 0 2rem; }
+
+/* ----------------------------------------
+15.- ESTILOS PARA #imagenes-nosotros
+-----------------------------------------*/
+#imagenes-nosotros .col-md-4,
+#imagenes-nosotros .col-6 {
+  padding: 0 0.25rem; }
+
+.modal-body {
+  padding: 0.5rem; }
+
+.modal-content {
+  background-color: #0e9c46;
+  border-radius: 0.5rem; }
+
+/* ----------------------------------------
+16.- ESTILOS PARA #horarios-sidebar
+-----------------------------------------*/
+#horarios-sidebar .table {
+  border: 2px solid #0e9c46; }
+
+#horarios-sidebar .table thead {
+  background-color: #0e9c46;
+  color: white; }
+
+#horarios-sidebar .table td,
+#horarios-sidebar .table thead th {
+  border-color: #5f9375; }
+
+#horarios-sidebar .table-hover tbody tr:hover {
+  color: #5f9375;
+  background-color: rgba(0, 0, 0, 0.075); }
+
+/* ----------------------------------------
+17.- ESTILOS PARA #contenido-servicios
+-----------------------------------------*/
+#contenido-servicios .card-header {
+  background-color: #0e9c46;
+  padding: 0.125rem; }
+
+#contenido-servicios .card-header .btn-link {
+  color: white;
+  font-size: 1.3rem; }
+
+#contenido-servicios .card-header .btn-link:hover {
+  text-decoration: none; }
+
+#contenido-servicios .card-body {
+  font-size: 1.25rem;
+  text-align: justify; }
+
+#cupon {
+  border: 3px dashed white; }
+
+/* ----------------------------------------
+18.- ESTILOS PARA #form-contacto
+-----------------------------------------*/
+#form-contacto {
+  border: 0.15rem solid #0e9c46;
+  padding: 3rem; }
+
+#form-contacto #group-nombre {
+  margin-top: 1rem; }
+
+/* ----------------------------------------
+x.- ESTILOS PARA ASIDE
+-----------------------------------------*/
+aside {
+  background-color: #cad8db;
+  color: #546174 !important;
+  border-radius: 5rem 0 0.25rem 0.75rem; }
+
+aside .precio-lateral {
+  margin: 0 4rem;
+  border: 0.25rem dashed white;
+  border-radius: 0.35rem; }
+
+/* ----------------------------------------
+x.- ESTILOS PARA MENÚ DE NAVEGACIÓN FIJO
+-----------------------------------------*/
+.menu-fijo {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background-color: #293039 !important;
+  width: 100% !important; }
+
+/* ----------------------------------------
+x.- Media Queries
+-----------------------------------------*/
+@media (min-width: 576px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    column-count: 2; } }
+@media (min-width: 768px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 0.5rem 1rem; }
+
+  .navbar-dark .navbar-nav .active > .nav-link,
+  .navbar-dark .navbar-nav .nav-link.active,
+  .navbar-dark .navbar-nav .nav-link.show,
+  .navbar-dark .navbar-nav .show > .nav-link {
+    padding: 0.5rem 1rem; }
+
+  .navbar-dark .navbar-nav .nav-link::after {
+    content: ""; }
+
+  aside {
+    background-color: #cad8db;
+    color: #546174 !important;
+    border-radius: 5rem 0 0.25rem 0.75rem; } }
+@media (min-width: 992px) {
+  html {
+    font-size: 16px; }
+
+  .card-columns {
+    -webkit-column-count: 3;
+    column-count: 3; } }
+
+/*# sourceMappingURL=estilos.css.map */
